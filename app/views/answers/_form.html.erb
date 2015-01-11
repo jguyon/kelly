@@ -1,0 +1,10 @@
+<% id = @question ? "new_#{dom_id @question}_answer" : dom_id(@answer, :edit) %>
+<%= better_form_for [@question, @answer], remote: true,
+  html: { class: 'collection-item', id: id } do |f| %>
+  <div class="input-field">
+    <%= f.text_area :title, class: 'answer-title' %>
+    <%= f.label :title %>
+  </div>
+
+  <%= f.submit class: 'btn' %>
+<% end %>

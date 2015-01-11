@@ -1,0 +1,5 @@
+<%= link_to questionnaire_choices_path(@questionnaire.token,
+  choice: { answer_id: answer.id }), remote: true, method: :post,
+  class: 'toggle' do %>
+  <i class="mdi-toggle-check-box-outline-blank"></i>
+<% end %>

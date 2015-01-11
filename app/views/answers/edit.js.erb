@@ -1,0 +1,3 @@
+$("<%= j render('form') %>").
+  replaceAll('#<%= dom_id @answer %>, #<%= dom_id @answer, :edit %>').
+  find('.answer-title').focus();

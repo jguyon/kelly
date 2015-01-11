@@ -1,0 +1,24 @@
+<div id="<%= dom_id answer %>" class="collection-item answer"
+  data-orderable-child="answers"
+  data-orderable-path="<%= move_answer_path(answer) %>">
+  <div class="right teal-text">
+    <i class="mdi-action-open-with" data-orderable-handle="answers"></i>
+    <%= link_to edit_answer_path(answer), remote: true do %>
+      <i class="mdi-content-create"></i>
+    <% end %>
+    <%= link_to answer_path(answer), method: :delete, remote: true do %>
+      <i class="mdi-content-clear"></i>
+    <% end %>
+  </div>
+
+  <%= link_to toggle_answer_path(answer), method: :patch, remote: true,
+    class: 'answer-toggle' do %>
+    <% if answer.correct %>
+      <i class="mdi-toggle-check-box"></i>
+    <% else %>
+      <i class="mdi-toggle-check-box-outline-blank"></i>
+    <% end %>
+  <% end %>
+
+  <%= answer.title %>
+</div>

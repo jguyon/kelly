@@ -1,0 +1,15 @@
+<%= better_form_for [@questionnaire, @question], remote: true,
+  html: { class: 'section' } do |f| %>
+  <% unless @question.new_record? %>
+    <%= render 'position', question: @question %>
+  <% end %>
+
+  <div class="card-panel">
+    <div class="input-field">
+      <%= f.text_area :title, class: 'question-title' %>
+      <%= f.label :title %>
+    </div>
+
+    <%= f.submit class: 'btn' %>
+  </div>
+<% end %>

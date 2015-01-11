@@ -1,0 +1,27 @@
+<div id="<%= dom_id question %>" class="section"
+  data-orderable-child="questions"
+  data-orderable-path="<%= move_question_path(question) %>">
+  <%= render 'position', question: question %>
+
+  <div class="card-panel question-title">
+    <div class="right teal-text">
+      <i class="mdi-action-open-with" data-orderable-handle="questions"></i>
+      <%= link_to edit_question_path(question), remote: true do %>
+        <i class="mdi-content-create"></i>
+      <% end %>
+      <%= link_to question_path(question), method: :delete, remote: true do %>
+        <i class="mdi-content-clear"></i>
+      <% end %>
+    </div>
+
+    <%= question.title %>
+  </div>
+
+  <div class="collection z-depth-1
+    <%= question.answers.length > 0 ? '' : 'hiddendiv' %>"
+    id="<%= dom_id question %>_answers" data-orderable-parent="answers">
+    <%= render question.answers %>
+  </div>
+
+  <%= render 'answers/new_link', question: question %>
+</div>

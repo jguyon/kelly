@@ -1,0 +1,6 @@
+$('#<%= dom_id @answer %>').remove();
+
+var $answers = $('#<%= dom_id @answer.question %>_answers');
+if ($answers.find('.answer').length === 0) {
+  $answers.addClass('hiddendiv');
+}

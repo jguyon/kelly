@@ -1,0 +1,69 @@
+en:
+  brand: "Kelly"
+  tagline: "Easily create MCQ tests and share them with your friends, pupils, or other."
+  activerecord:
+    attributes:
+      questionnaire:
+        points_for_correct_answer: "Points for a correct answer"
+        points_for_incorrect_answer: "Points for an incorrect answer"
+  helpers:
+    error_notification: "Please review the problems below:"
+    label:
+      questionnaire:
+        name: "Choose a name"
+      take:
+        name: "Enter your name"
+    submit:
+      answer:
+        create: "Create answer"
+        update: "Update answer"
+      question:
+        create: "Create question"
+        update: "Update question"
+      questionnaire:
+        create: "Create questionnaire"
+        update: "Saves changes"
+      take:
+        create: "Begin"
+  layouts:
+    navbar:
+      new_questionnaire: "New questionnaire"
+      current_questionnaires: "Current questionnaires"
+  answers:
+    new_link:
+      text: "New answer"
+  entries:
+    show:
+      question: "Question %{number} / %{total}"
+      next_question: "Next question"
+  questionnaires:
+    new:
+      create_questionnaire: "Create a questionnaire"
+    show:
+      share_link: "Save this link and share your questionnaire with your friends, pupils, or other:"
+    edit:
+      discard: "Discard changes"
+      publish: "Save changes and publish"
+  questions:
+    index:
+      settings: "Go to settings"
+    new_link:
+      text: "New question"
+    position:
+      text: "Question %{count}"
+  takes:
+    new:
+      take_questionnaire: "Take the questionnaire"
+      rules: "Rules"
+      questions:
+        one: "1 question"
+        other: "%{count} questions"
+      points_for_correct_answer:
+        one: "%{count} point for every correct answer"
+        other: "%{count} points for every correct answer"
+      points_for_incorrect_answer:
+        one: "-%{count} point for every incorrect answer"
+        other: "-%{count} points for every incorrect answer"
+    show:
+      congrats: "Congrats, %{name}!"
+      score: "You got %{score} / %{max}!"

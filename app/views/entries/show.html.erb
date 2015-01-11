@@ -1,0 +1,27 @@
+<h2 class="grey-text text-darken-2"><%= @questionnaire.name %></h2>
+
+<strong class="grey-text text-darken-2">
+  <%= t '.question', number: @entry.question.position,
+    total: @questionnaire.questions.size %>
+</strong>
+
+<div class="card-panel">
+  <%= @entry.question.title %>
+</div>
+
+<div class="collection z-depth-1">
+  <% @entry.question.answers.each do |answer| %>
+    <div class="collection-item" id="<%= dom_id answer %>">
+      <% if choice = @entry.choice_for(answer) %>
+        <%= render 'checked', choice: choice %>
+      <% else %>
+        <%= render 'unchecked', answer: answer %>
+      <% end %>
+
+      <%= answer.title %>
+    </div>
+  <% end %>
+</div>
+
+<%= link_to t('.next_question'), questionnaire_entry_path(@questionnaire.token),
+  method: :post, class: 'btn' %>

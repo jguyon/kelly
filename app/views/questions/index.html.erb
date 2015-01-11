@@ -1,0 +1,13 @@
+<div class="right">
+  <%= link_to t('.settings'), edit_questionnaire_path(@questionnaire),
+    class: 'btn amber' %>
+</div>
+<h2 class="grey-text text-darken-2">
+  <%= @questionnaire.name %>
+</h2>
+
+<div id="questions" data-orderable-parent="questions">
+  <%= render @questions %>
+</div>
+
+<%= render 'new_link' %>

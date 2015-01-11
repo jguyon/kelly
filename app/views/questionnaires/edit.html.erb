@@ -1,0 +1,32 @@
+<div class="right">
+  <%= link_to t('.discard'), questionnaire_questions_path(@questionnaire),
+    class: 'btn amber' %>
+</div>
+<h2 class="grey-text text-darken-2">
+  <%= @questionnaire.name %>
+</h2>
+
+<div class="card-panel">
+  <%= better_form_for @questionnaire do |f| %>
+    <%= f.error_notification %>
+
+    <div class="row">
+      <div class="col m6">
+        <div class="input-field">
+          <%= f.number_field :points_for_correct_answer, step: 0.5 %>
+          <%= f.label :points_for_correct_answer %>
+        </div>
+
+        <div class="input-field">
+          <%= f.number_field :points_for_incorrect_answer, step: 0.5 %>
+          <%= f.label :points_for_incorrect_answer %>
+        </div>
+      </div>
+    </div>
+
+    <%= f.submit class: 'btn' %>
+    <%= f.button class: 'btn light-green', name: 'publish' do %>
+      <%= t('.publish') %>
+    <% end %>
+  <% end %>
+</div>

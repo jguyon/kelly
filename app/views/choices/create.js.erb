@@ -1,0 +1,2 @@
+$("<%= j render('entries/checked', choice: @choice) %>").
+  replaceAll('#<%= dom_id @choice.answer %> .toggle');

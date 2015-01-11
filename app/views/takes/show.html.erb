@@ -1,0 +1,16 @@
+<h2 class="grey-text text-darken-2"><%= @questionnaire.name %></h2>
+
+<div class="row">
+  <div class="col m4 offset-m4">
+    <div class="card-panel red lighten-2 white-text flow-text">
+      <h4><%= t '.congrats', name: @take.name %></h4>
+
+      <p>
+        <% score = @take.score % 1 == 0 ? @take.score.to_i : @take.score %>
+        <% max = @questionnaire.max_score % 1 == 0 ?
+          @questionnaire.max_score.to_i : @questionnaire.score %>
+        <%= t '.score', score: score, max: max %>
+      </p>
+    </div>
+  </div>
+</div>

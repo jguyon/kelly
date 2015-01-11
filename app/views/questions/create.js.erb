@@ -1,0 +1,3 @@
+$("<%= j render(@question) %>").replaceAll('#new_question').
+  find('[data-orderable-parent]').orderable();
+$('#new_question_link').removeClass('hiddendiv');

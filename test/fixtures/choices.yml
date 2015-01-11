@@ -1,0 +1,15 @@
+john_physics_one_correct_one:
+  entry: john_physics_one
+  answer: physics_one_correct_one
+
+john_physics_one_correct_two:
+  entry: john_physics_one
+  answer: physics_one_correct_two
+
+john_physics_three_correct:
+  entry: john_physics_three
+  answer: physics_three_correct
+
+john_physics_three_incorrect:
+  entry: john_physics_three
+  answer: physics_three_incorrect

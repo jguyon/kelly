@@ -1,0 +1,6 @@
+$('#<%= dom_id @answer %> .answer-toggle i').removeClass().
+<% if @answer.correct %>
+  addClass('mdi-toggle-check-box');
+<% else %>
+  addClass('mdi-toggle-check-box-outline-blank');
+<% end %>

@@ -1,0 +1,3 @@
+<% id = "new_#{dom_id @question}_answer" %>
+$('#<%= id %>').replaceWith("<%= j render(@answer) %>");
+$('#<%= id %>_link').removeClass('hiddendiv');

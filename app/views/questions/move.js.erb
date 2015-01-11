@@ -1,0 +1,4 @@
+<% (@moved_questions + [@question]).each do |question| %>
+  $('#<%= dom_id question %> .question-position').
+    replaceWith("<%= j render('position', question: question) %>");
+<% end %>

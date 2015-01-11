@@ -1,0 +1,4 @@
+<%= link_to questionnaire_choice_path(@questionnaire.token, choice),
+  remote: true, method: :delete, class: 'toggle' do %>
+  <i class="mdi-toggle-check-box"></i>
+<% end %>

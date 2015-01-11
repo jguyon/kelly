@@ -1,0 +1,12 @@
+$('#new_question_link').addClass('hiddendiv');
+
+var $newForm = $("<%= j render('form') %>");
+var $form = $('#new_question');
+
+if ($form.length > 0) {
+  $form.replaceWith($newForm);
+} else {
+  $('#questions').append($newForm);
+}
+
+$newForm.find('.question-title').focus();

@@ -1,0 +1,3 @@
+$("<%= j render(@question) %>").
+  replaceAll('#<%= dom_id @question, :edit %>').
+  find('[data-orderable-parent]').orderable();

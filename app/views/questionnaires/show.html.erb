@@ -1,0 +1,13 @@
+<div class="row">
+  <div class="col m8 offset-m2">
+    <div class="card-panel red lighten-2 white-text flow-text">
+      <h1><%= @questionnaire.name %></h1>
+      <p><%= t '.share_link' %></p>
+    </div>
+
+    <div class="card-panel flow-text ellipsis">
+      <%= link_to new_questionnaire_take_url(@questionnaire.token),
+        new_questionnaire_take_url(@questionnaire.token) %>
+    </div>
+  </div>
+</div>

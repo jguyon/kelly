@@ -1,0 +1,15 @@
+<% id = "new_#{dom_id @question}_answer" %>
+$('#<%= id %>_link').addClass('hiddendiv');
+
+var $newForm = $("<%= j render('form') %>");
+var $form = $('#<%= id %>');
+
+if ($form.length > 0) {
+  $form.replaceWith($newForm);
+} else {
+  $('#<%= dom_id @question %>_answers').
+    append($newForm).
+    removeClass('hiddendiv');
+}
+
+$newForm.find('.answer-title').focus();
